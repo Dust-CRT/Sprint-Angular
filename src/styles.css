@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.logo {
+    display: flex;
+    max-height: 10dvh;
+    padding-left: 70dvw;
+    padding-top: 5dvh;
+}
+
+.banner {
+    display: flex;
+    padding-top: 10dvh;
+    padding-left: 5dvw;
+    padding-right: 5dvw;
+    max-height: 50dvh;
+}
+
+.banner.div {
+    display: block;
+
+}
+
+.loginBox {
+    display: block;
+    width: 50%;
+    height: 50dvh;
+    background-color: gray;
+}
+
