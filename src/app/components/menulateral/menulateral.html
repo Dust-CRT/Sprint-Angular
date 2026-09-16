@@ -1,0 +1,9 @@
+<button class="btnMenu" (click)="toggleMenu()">☰</button>
+
+<nav class="homeNav" [class.aberto]="menuAberto">
+    <ul>
+        <li class="ativo">Home</li>
+        <li>Dashboard</li>
+        <li><a href="#" (click)="false">Sair</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,36 @@
+:host {
+    display: contents;
+}
+
+.btnMenu {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    height: 50px;          
+    display: flex;
+    align-items: center;    
+    z-index: 20;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+.homeNav {
+    position: fixed;
+    top: 50px;
+    height: 100dvh;
+    width: 0;
+    overflow: hidden;
+    background-color: #ededed;
+    padding: 20px 0;
+    transition: width 0.2s ease;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.homeNav.aberto {
+    width: 200px;
+}
