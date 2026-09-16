@@ -4,8 +4,6 @@
 
 .btnMenu {
     position: fixed;
-    top: 0;
-    left: 20px;
     height: 50px;          
     display: flex;
     align-items: center;    
@@ -47,23 +45,12 @@
     border-style: solid;
     padding-top: 10px;
     padding-bottom: 10px;
-    overflow: hidden;
+    text-align: start;
 }
 
-.logoutBtn {
-    position: relative;
-    background-color: #d9dee1;
-    border-color: #eeeff0;
-    color: #e92222;
-    border-style: solid;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    overflow: hidden;
-}
+.btn:active {
+    background-color: #b1b8bd;
 
-.logoutBtn:hover {
-    background-color: #e92222;
-    color: #d9dee1;
 }
 
 .btn::after {
@@ -80,4 +67,25 @@
 
 .btn:hover::after {
     transform: scaleY(1);
+}
+
+.logoutBtn {
+    position: relative;
+    background-color: #d9dee1;
+    border-color: #eeeff0;
+    color: #e92222;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: start;
+}
+
+.logoutBtn:hover {
+    background-color: #e92222;
+    color: #d9dee1;
+}
+
+.logoutBtn:active {
+    background-color: #d9dee1;
+    color: #e92222;
 }
