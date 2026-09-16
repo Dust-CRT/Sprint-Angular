@@ -2,7 +2,11 @@ import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { flush } from '@angular/core/testing';
 import { Home } from './pages/home/home';
+import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
-    {path: "", component: Home},
+    {path: "", redirectTo: "login", pathMatch: "full"},
+    {path: "login", component: Login},
+    {path: "home", component: Home},
+    {path: "dashboard", component: Dashboard}
 ];

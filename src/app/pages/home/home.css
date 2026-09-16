@@ -4,62 +4,12 @@
     
 }
 
-.topbar {
-    height: 50px;        
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;     
-    background-color: #002d5b;
-    color: #ffffff;
-}
-.logoTopbar {
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logoImgTopbar {
-    height: 30px;       
-    object-fit: contain;
-}
-
-.tituloTopbar {
-    font-size: 14px;
-}
-
 .conteudoHome {
     flex: 1;
     display: flex;
 }
 
-.homeNav {
-    width: 200px;
-    background-color: #ededed;
-    padding: 20px 0;
-}
-
-.homeNav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.homeNav li {
-    padding: 12px 20px;
-    cursor: pointer;
-}
-
-.homeNav li:hover {
-    background-color: #dddddd;
-}
-
-.homeNav li.active {
-    color: #4caf50;
-    font-weight: bold;
-}
-
+/*socorro*/
 .homeMain {
     flex: 1;
     position: relative;
@@ -68,26 +18,39 @@
     justify-content: center;
 }
 
+.bgHome {
+    position: absolute;
+    inset: 0;
+    width: 80%;
+    height: 80%;
+    object-fit:contain;
+    justify-self: center;
+    align-self: center;
+    z-index: 0;
+}
 
-.cardBemvindo {
+.card {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 24px 32px;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.8);           
+    padding: 15% 15%;
+    border-radius: 2px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);    
     text-align: left;
 }
 
-.cardBemvindo h2 {
-    font-size: 13px;
-    color: #555555;
-    margin: 0 0 8px 0;
-    text-transform: uppercase;
-}
-
-.cardBemvindo p {
+.card p {
     font-size: 20px;
     color: #002d5b;
     margin: 0;
-}   
+}
+
+.tituloCard {
+    display: flex;
+    align-self: flex-start;
+    font-size: 13px;
+    color: #002d5b;
+    margin: 0 0 8px 0;
+    align-self: flex-start;
+    text-transform: uppercase;
+}
