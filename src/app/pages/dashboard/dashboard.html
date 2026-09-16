@@ -5,37 +5,41 @@
             <div class="cards">
                 <div class="card">
                     <div class="cardTitulo">Veículo</div>
-                    <select class="selecaoDeVeiculo" name="modelo">
-                        <option value="">Selecione um modelo</option>
+                    <select class="selecaoDeVeiculo" name="modelo" (change)="veiculoEscolhido($event)">
+                        <option value="" selected disabled hidden>Selecione um modelo</option>
+                        <option value="" *ngFor="let v of veiculos" [value]="v.id">
+                            {{v.vehicle}}
+                        </option>
                     </select>
                 </div>
  
                 <div class="card">
                     <div class="cardTitulo">Total de Vendas</div>
-                    <div class="cardValor" id="totalVendas">CONECTA A API PORRA</div>
+                    <div class="cardValor" id="totalVendas">{{veiculoSel?.volumetotal || 0}}</div>
                     <div class="cardLabel"> Unid.</div>
                 </div>
                 
                 <div class="card">
                     <div class="cardTitulo">Conectados</div>
-                    <div class="cardValor" id="totalConectados">CONECTA DESGRAÇA</div>
+                    <div class="cardValor" id="totalConectados">{{veiculoSel?.connected || 0}}</div>
                     <div class="cardLabel"> Unid.</div>
                 </div>
                 
                 <div class="card">
                     <div class="cardTitulo">Update Software</div>
-                    <div class="cardValor" id="totalUpdate">EU N TO BEM AAAAAAAAAAAAAAAAAAAAAAAA</div>
+                    <div class="cardValor" id="totalUpdate">{{veiculoSel?.softwareUpdates || 0}}</div>
                     <div class="cardLabel"> Unid.</div>
                 </div>
             </div>
  
             <div class="imgDisplayVeiculoAtual">
-                <!--Troca saporra aqui por favor // CONECTA A API INFERNO-->
-                <img class="imgVeiculo" src="img/broncoSport.png" alt="">
+                <img class="imgVeiculo" *ngIf="veiculoSel" [src]="veiculoSel.img" [alt]="veiculoSel.vehicle">
             </div>
- 
+            
             <div class="tabela">
-                <input type="text" class="tableSearch" placeholder="Buscar por código do veículo (VIN)">
+                <input type="text" class="tableSearch" placeholder="Buscar por código do veículo (VIN)" [(ngModel)]="filtroVin" (input)="onVinInput(filtroVin)">
+                <div class="erroVin" *ngIf="erroVin">{{ erroVin }}</div>
+                
                 <table class="tabelaVeiculo">
                     <thead class="cabecalhoTabelaVeiculo">
                         <tr>
@@ -48,13 +52,13 @@
                         </tr>
                     </thead>
                     <tbody id="dataVeiculo">
-                        <tr>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
+                        <tr *ngFor="let d of dadosVeiculos">
+                            <td>{{ d.vin }}</td>
+                            <td>{{ d.odometro }}</td>
+                            <td>{{ d.nivelCombustivel }}</td>
+                            <td>{{ d.status }}</td>
+                            <td>{{ d.lat }}</td>
+                            <td>{{ d.long }}</td>
                         </tr>
                     </tbody>
                 </table>

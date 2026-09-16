@@ -13,9 +13,9 @@
                 <p class="titulo">Boas-vindas</p>
     
                 <div class="login">
-                    <form class="loginForm" onsubmit="return Post(this);">
-                        <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-                        <input type="password" name="senha" placeholder="SENHA*" class="fordform" required>
+                    <form class="loginForm" #loginFrom = "ngForm" (ngSubmit) = "login()">
+                        <input type="email" name="email" [(ngModel)]="usuario.nome" class="fordform" required>
+                        <input type="password" name="senha" [(ngModel)]="usuario.senha" class="fordform" required>
     
                         <div class="autologin">
                             <label for="autoLogin">Logar automaticamente</label>

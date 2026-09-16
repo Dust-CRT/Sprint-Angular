@@ -2,8 +2,8 @@
 
 <nav class="homeNav" [class.aberto]="menuAberto">
     <div class="btns">
-        <button class="btn">Home</button>
-        <button class="btn">Dashboard</button>
-        <button class="logoutBtn">Logout</button>
+        <button class="btn" (click)="navegarPara('home')">Home</button>
+        <button class="btn" (click)="navegarPara('dashboard')">Dashboard</button>
+        <button class="logoutBtn" (click)="logout();">Logout</button>
     </div>
 </nav>
