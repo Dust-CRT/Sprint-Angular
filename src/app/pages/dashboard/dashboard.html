@@ -1,85 +1,63 @@
-<body class="dashboard-body">
-    <header class="topbar">
-        <div class="topbar-logo">
-            <div class="topbar-logo-placeholder">Ford</div>
-            <span class="topbar-title">Dashboard FORD</span>
-        </div>
-    </header>
- 
-    <div class="dashboard-content">
-        <nav class="dashboard-nav">
-            <ul>
-                <li>Home</li>
-                <li class="active">Dashboard</li>
-                <li><a href="#" onclick="return false;">Sair</a></li>
-            </ul>
-        </nav>
- 
-        <main class="dashboard-main">
-            <h1 class="dashboard-title">Dashboard FORD</h1>
- 
-            <div class="cards-row">
-                <!-- Passo 8: busca por nome do modelo (dados vêm de /vehicle) -->
+<body class="dashboardBody">
+        <app-menulateral></app-menulateral>
+
+        <main class="dashboardMain">
+            <div class="cards">
                 <div class="card">
-                    <div class="card-label">Veículo</div>
-                    <select class="vehicle-select" name="modelo">
+                    <div class="cardTitulo">Veículo</div>
+                    <select class="selecaoDeVeiculo" name="modelo">
                         <option value="">Selecione um modelo</option>
-                        <option value="ranger">Ranger</option>
-                        <option value="mustang">Mustang</option>
-                        <option value="territory">Territory</option>
-                        <option value="bronco">Bronco Sport</option>
                     </select>
                 </div>
  
-                <!-- Passo 9: total de vendas -->
                 <div class="card">
-                    <div class="card-label">Total de Vendas</div>
-                    <div class="card-value" id="totalVendas">0</div>
+                    <div class="cardTitulo">Total de Vendas</div>
+                    <div class="cardValor" id="totalVendas">CONECTA A API PORRA</div>
+                    <div class="cardLabel"> Unid.</div>
                 </div>
- 
-                <!-- Passo 9: conectados -->
+                
                 <div class="card">
-                    <div class="card-label">Conectados</div>
-                    <div class="card-value" id="totalConectados">0</div>
+                    <div class="cardTitulo">Conectados</div>
+                    <div class="cardValor" id="totalConectados">CONECTA DESGRAÇA</div>
+                    <div class="cardLabel"> Unid.</div>
                 </div>
- 
-                <!-- Passo 9: software atualizado -->
+                
                 <div class="card">
-                    <div class="card-label">Update Software</div>
-                    <div class="card-value" id="totalUpdate">0</div>
+                    <div class="cardTitulo">Update Software</div>
+                    <div class="cardValor" id="totalUpdate">EU N TO BEM AAAAAAAAAAAAAAAAAAAAAAAA</div>
+                    <div class="cardLabel"> Unid.</div>
                 </div>
             </div>
  
-            <!-- Passo 10: imagem do veículo selecionado -->
-            <div class="vehicle-preview">
-                <div class="vehicle-img-placeholder">Imagem do veículo selecionado</div>
+            <div class="imgDisplayVeiculoAtual">
+                <!--Troca saporra aqui por favor // CONECTA A API INFERNO-->
+                <img class="imgVeiculo" src="img/broncoSport.png" alt="">
             </div>
  
-            <!-- Passo 11: tabela com busca por código do veículo (dados vêm de /vehicleData) -->
-            <input type="text" class="table-search" placeholder="Buscar por código do veículo (VIN)">
- 
-            <table class="vehicle-table">
-                <thead>
-                    <tr>
-                        <th>Código - Vin</th>
-                        <th>Odômetro</th>
-                        <th>Nível de Combustível</th>
-                        <th>Status</th>
-                        <th>Lat.</th>
-                        <th>Long.</th>
-                    </tr>
-                </thead>
-                <tbody id="vehicleDataBody">
-                    <tr>
-                        <td>2FRHDUYS2Y63NHD22454</td>
-                        <td>3000 Km</td>
-                        <td>90%</td>
-                        <td>on</td>
-                        <td>-12,2322</td>
-                        <td>-95,2314</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="tabela">
+                <input type="text" class="tableSearch" placeholder="Buscar por código do veículo (VIN)">
+                <table class="tabelaVeiculo">
+                    <thead class="cabecalhoTabelaVeiculo">
+                        <tr>
+                            <th>Código - Vin</th>
+                            <th>Odômetro</th>
+                            <th>Nível de Combustível</th>
+                            <th>Status</th>
+                            <th>Lat.</th>
+                            <th>Long.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataVeiculo">
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </main>
-    </div>
 </body>

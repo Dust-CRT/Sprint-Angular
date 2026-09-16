@@ -1,0 +1,99 @@
+
+.dashboardBody {
+    flex-direction: column;
+}
+
+.dashboardMain {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    width: 100dvw;
+    max-height: 100dvh;
+    padding-top: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    min-height: 100px;
+    align-self: center;
+}
+
+.cardTitulo {
+    font-size: 20px;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.cardLabel {
+    font-size: 15px;
+    color: #888888;
+    margin-top: 8px;
+}
+
+.cardValor {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a8ed8;
+}
+
+.selecaoDeVeiculo {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.imgDisplayVeiculoAtual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.imgVeiculo {
+    object-fit: contain;
+}
+
+.tableSearch {
+    margin-bottom: 12px;
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.tabelaVeiculo {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.tabelaVeiculo th,
+.tabelaVeiculo td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.tabelaVeiculo th {
+    background-color: #f2f2f2;
+    color: #555555;
+}
+
+.cabecalhoTabelaVeiculo {
+    color: #094987;
+}

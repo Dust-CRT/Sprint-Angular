@@ -23,8 +23,8 @@
     height: 100dvh;
     width: 0;
     overflow: hidden;
-    background-color: #ededed;
-    padding: 20px 0;
+    background-color: #eeeff0;
+    padding: 50px 0;
     transition: width 0.2s ease;
     white-space: nowrap;
     z-index: 2;
@@ -32,4 +32,52 @@
 
 .homeNav.aberto {
     width: 200px;
+}
+
+.btns {
+    display: grid;
+
+}
+
+.btn {
+    position: relative;
+    background-color: #d9dee1;
+    border-color: #eeeff0;
+    color: #4caf50;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.logoutBtn {
+    position: relative;
+    background-color: #d9dee1;
+    border-color: #eeeff0;
+    color: #e92222;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.logoutBtn:hover {
+    background-color: #e92222;
+    color: #d9dee1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px;               /* espessura da barrinha */
+    background-color: #4caf50;
+    transform: scaleY(0);     /* começa "fechada" */
+    transition: transform 0.2s ease-out;
+}
+
+.btn:hover::after {
+    transform: scaleY(1);     /* "abre" a barrinha ao passar o mouse */
 }
